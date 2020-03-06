@@ -1,0 +1,32 @@
+﻿@page "{id?}"
+@model RazorPagesTutorial.Pages.Employees.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+
+    var photoPath = "/images/" + (Model.Employee.PhotoPath ?? "noImage.jpg");
+
+}
+
+<h1>Details</h1>
+
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="card m-3" style="min-width: 18rem; max-width:30%">
+            <div class="card-header">
+                <h3>@Model.Employee.Name</h3>
+            </div>
+            <div class="card-body text-center">
+                <img class="card-img-top imageThumbnail" src="@photoPath" alt="Card image cap" asp-append-version="true">
+                <h5>Email: @Model.Employee.Email</h5>
+                <h4>@Model.Employee.Departement</h4>
+            </div>
+            <div class="card-footer">
+                <a asp-page="index"  class="btn btn-primary m-1">Retour</a>
+                <a asp-page="Edit" asp-route-id="@Model.Employee.Id" class="btn btn-primary m-1">Editer</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

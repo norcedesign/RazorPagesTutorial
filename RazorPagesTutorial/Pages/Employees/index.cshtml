@@ -1,4 +1,4 @@
-﻿@page
+﻿@page 
 @model RazorPagesTutorial.Pages.Employees.indexModel
 @{
     ViewData["Title"] = "index";
@@ -21,12 +21,13 @@
             <div class="card-header">
                 <h3>@emp.Name</h3> 
             </div>
-            <div class="card-bodyer">
+            <div class="card-body text-center">
                 <img class="card-img-top imageThumbnail" src="@photoPath" alt="Card image cap" asp-append-version="true">
+              
             </div>
-            <div class="card-footer">
-                <a href="#" class="btn btn-primary m-1" >View</a>
-                <a href="#" class="btn btn-primary m-1">Edit</a>
+            <div class="card-footer text-center">
+                <a asp-page="Details" asp-route-id="@emp.Id" class="btn btn-primary m-1">Voir</a>
+                <a asp-page="Edit" asp-route-id="@emp.Id" class="btn btn-primary m-1">Editer</a>
                 <a href="#" class="btn btn-danger m-1">Delete</a>
             </div>
         </div>
