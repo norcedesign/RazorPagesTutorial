@@ -7,21 +7,21 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorPagesTutorial.Models;
 using RazorPagesTutorial.Services;
 
-namespace RazorPagesTutorial.Pages.Employees
+namespace RazorPagesTutorial.Pages.Etudiants
 {
     public class indexModel : PageModel
     {
-        public IEnumerable <Employee>  Employees { get; set; }
+        public IEnumerable <Etudiant>  Etudiants { get; set; }
 
-        private readonly IEmployeeRepository empRepository;
-        public indexModel(IEmployeeRepository empRepository)
+        private readonly IEtudiantRepository empRepository;
+        public indexModel(IEtudiantRepository empRepository)
         {
             this.empRepository = empRepository;
         }
 
         public void OnGet()
         {
-            Employees = empRepository.GetAllEmployees();
+            Etudiants = empRepository.GetAllEtudiants();
         }
     }
 }

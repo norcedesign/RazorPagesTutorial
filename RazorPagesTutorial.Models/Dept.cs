@@ -5,8 +5,8 @@ namespace RazorPagesTutorial.Models
     public enum Dept
     {
         Aucun,
-        RH,
-        TI,
+        Education,
+        Informatique,
         Finances
 
     }

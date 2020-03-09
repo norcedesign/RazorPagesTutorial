@@ -26,7 +26,7 @@ namespace RazorPagesTutorial
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
+            services.AddSingleton<IEtudiantRepository, MockEtudiantRepository>();
 
             services.Configure<RouteOptions>(options =>
             {
