@@ -39,6 +39,7 @@ namespace RazorPagesTutorial.Services
                 etudiant.Nom = etudiantModif.Nom;
                 etudiant.Email = etudiantModif.Email;
                 etudiant.Departement = etudiantModif.Departement;
+                etudiant.PhotoPath = etudiantModif.PhotoPath;
             }
 
             return etudiant;
